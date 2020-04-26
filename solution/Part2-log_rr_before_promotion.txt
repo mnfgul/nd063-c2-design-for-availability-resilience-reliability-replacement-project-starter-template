@@ -1,0 +1,11 @@
+mysql> INSERT INTO `users`(`name`,`bio`) VALUES ('Larry Page','Founder of Google');
+
+ERROR 1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement
+
+mysql> SELECT * FROM users;
++----+------------+----------------------+---------------------+
+| id | name       | bio                  | created_at          |
++----+------------+----------------------+---------------------+
+|  1 | Bill Gates | Founder of Microsoft | 2020-04-26 13:24:08 |
++----+------------+----------------------+---------------------+
+1 row in set (0.00 sec)

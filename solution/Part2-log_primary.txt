@@ -1,0 +1,27 @@
+[ec2-user@ip-10-1-11-119 ~]$ mysql -h udacity.******.us-east-1.rds.amazonaws.com -D udacity -u admin -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 36
+Server version: 5.7.22-log Source distribution
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> CREATE TABLE IF NOT EXISTS users ( id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255) NOT NULL, bio TEXT, created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP)  ENGINE=INNODB;
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> INSERT INTO `users`(`name`,`bio`) VALUES ('Bill Gates','Founder of Microsoft');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> SELECT * FROM users;
++----+------------+----------------------+---------------------+
+| id | name       | bio                  | created_at          |
++----+------------+----------------------+---------------------+
+|  1 | Bill Gates | Founder of Microsoft | 2020-04-26 13:24:08 |
++----+------------+----------------------+---------------------+
+1 row in set (0.00 sec)

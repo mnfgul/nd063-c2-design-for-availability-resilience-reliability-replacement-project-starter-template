@@ -1,0 +1,11 @@
+mysql> INSERT INTO `users`(`name`,`bio`) VALUES ('Larry Page','Founder of Google');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> SELECT * FROM users;
++----+------------+----------------------+---------------------+
+| id | name       | bio                  | created_at          |
++----+------------+----------------------+---------------------+
+|  1 | Bill Gates | Founder of Microsoft | 2020-04-26 13:24:08 |
+|  2 | Larry Page | Founder of Gooogle   | 2020-04-26 13:44:19 |
++----+------------+----------------------+---------------------+
+2 row in set (0.00 sec)
